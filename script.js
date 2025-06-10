@@ -21,4 +21,24 @@ btnAdd.addEventListener('click', function() {
     li.textContent = tarefa.value;
     taskList.appendChild(li);
     tarefa.value = ''; 
+
+    const removeButton = document.createElement('button');
+    removeButton.id = "remove"
+    removeButton.textContent = "x"
+    li.appendChild(removeButton);
+
+    const concluirButton = document.createElement('button');
+    concluirButton.id = "conclui";
+    concluirButton.textContent = "✓"
+    li.appendChild(concluirButton);
+    
+    removeButton.addEventListener('click', function(){
+        taskList.removeChild(li);
+    })
+
+    concluirButton.addEventListener('click', function(){
+        li.classList.toggle('completed');
+    })
 })
+
+
