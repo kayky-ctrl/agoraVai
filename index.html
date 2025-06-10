@@ -1,26 +1,29 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title></title>
+    <meta name="viewport" content="width=initial-scale=1.0" />
+    <title>To Do List do Kayky</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="container">
-      <h1 id="titulo">Lista de tarefas</h1>
-
+      <!-- titulo da página -->
+      <h1 id="titulo">Lista de Tarefas do Kayky</h1>
+      <!-- formulário -->
       <div class="input-section">
-        <input type="text" name="" id="tarefa" placeholder="Adicione uma nova tarefa" required/>
-
-        <button id="btn-add">Adicionar tarefa</button>
+        <!-- inputnpara adicionar tarefa com texto dentro do input(placeholder) -->
+        <input
+          type="text"
+          placeholder="Adicionar aqui a tarefa..."
+          id="tarefa"
+        />
+        <!-- botão de envio da tarefa -->
+        <button id="btn-add">Adicionar tarefas</button>
       </div>
-
-    </div>
-
-    <div class="todo-list">
-        <ul id="taskList">      
-        </ul>
+      <div class="todo-list">
+        <ul id="tasklist"></ul>
+      </div>
     </div>
 
     <script src="script.js"></script>
