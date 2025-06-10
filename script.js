@@ -4,9 +4,12 @@ const taskList = document.getElementById('taskList');
 const titulo = document.getElementById('titulo');
 
 let nome = prompt('Qual o seu nome?');
-if (nome) {
-    titulo.innerHTML = `Lista de tarefas de ${nome}`;
+if (nome == "") {
+    titulo.innerHTML = "Lista de tarefas de generica";
 }   
+else{
+    titulo.innerHTML = `Lista de tarefas de ${nome}`;
+}
 
 btnAdd.addEventListener('click', function() {
     if (tarefa === '') {
