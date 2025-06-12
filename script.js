@@ -27,8 +27,6 @@ function criaTarefa(){
     }
     else{
 
-    
-
     const listItem =document.createElement('li');
     listItem.textContent = tarefa.value;
     tasklist.appendChild(listItem);
