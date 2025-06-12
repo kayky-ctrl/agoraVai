@@ -44,5 +44,9 @@ function criaTarefa(){
     
     concluirButton.addEventListener("click",function(){
         listItem.classList.toggle('completed');
-    })
+    });
 }
+
+tarefa.addEventListener('keypress', function(e){
+    if(e.key === 'Enter') criaTarefa()
+});
