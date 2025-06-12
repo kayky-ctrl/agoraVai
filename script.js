@@ -1,24 +1,39 @@
 const btnadd =document.getElementById('btn-add');
 const tarefa = document.getElementById('tarefa')
-const tastlist = document.getElementById('tasklist')
+const tasklist = document.getElementById('tasklist')
 const titulo = document.getElementById('titulo')
 
 let nome = prompt("qual o seu nome? ")
+tarefa.focus()
+
 if(nome==""){
     titulo.innerHTML = "lista de tarefa Genérica"
 }
 else{
-titulo.innerHTML =`Lista de tarefa: ${nome}`;
+    titulo.innerHTML =`Lista de tarefa: ${nome}`;
 }
+
+tarefa.addEventListener('keypress', function(e){
+    if(e.key === 'Enter') criaTarefa()
+});
 
 // acompanha o evento de clique do botão adicionar tarefa
 btnadd.addEventListener("click",criaTarefa);
 
 function criaTarefa(){
+
+    if(tarefa.value == ""){
+        alert("Digite o nome da sua tarefa")
+    }
+    else{
+
+    
+
     const listItem =document.createElement('li');
     listItem.textContent = tarefa.value;
     tasklist.appendChild(listItem);
     tarefa.value = ''; 
+    tarefa.focus();
 
     //criar botão de deletar tarefa
     const removeButton = document.createElement('button');
@@ -47,7 +62,4 @@ function criaTarefa(){
         listItem.classList.toggle('completed');
     });
 }
-
-tarefa.addEventListener('keypress', function(e){
-    if(e.key === 'Enter') criaTarefa()
-});
+}
