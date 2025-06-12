@@ -10,6 +10,7 @@ if(nome==""){
 else{
 titulo.innerHTML =`Lista de tarefa: ${nome}`;
 }
+
 // acompanha o evento de clique do botão adicionar tarefa
 btnadd.addEventListener("click",criaTarefa);
 
